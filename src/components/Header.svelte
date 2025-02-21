@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 5px 25px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     margin-bottom: 10px;
     background: var(--bg-color);
     color: var(--text-color);
@@ -130,6 +130,8 @@
 
 .sidebar.open {
     transform: translateX(0);
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .close-btn {
@@ -151,8 +153,6 @@
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        text-decoration: none;
-        color: #ffffff;
     }
     .menu-btn {
         display: block;
@@ -185,10 +185,41 @@
 <!-- Sidebar for mobile navigation -->
 <div class="sidebar" class:open={isOpen}>
     <button class="close-btn" on:click={toggleMenu}>✖</button>
-    <a href="/" on:click={toggleMenu}>Home</a>
-    <a href="/speakers" on:click={toggleMenu}>Speakers</a>
-    <a href="/schedule" on:click={toggleMenu}>Schedule</a>
-    <a href="/sponsors" on:click={toggleMenu}>Sponsors</a>
-    <a href="/about" on:click={toggleMenu}>About</a>
-    <a href="/contact" on:click={toggleMenu}>Contact</a>
+    <a href="/" 
+   style="text-decoration: none; color: white; display: block; padding: 12px 20px; font-size: 18px; 
+          border-radius: 8px; transition: background 0.3s ease, transform 0.2s;"
+   on:click={toggleMenu}>
+   Home
+</a>
+<a href="/speakers" 
+   style="text-decoration: none; color: white; display: block; padding: 12px 20px; font-size: 18px; 
+          border-radius: 8px; transition: background 0.3s ease, transform 0.2s;"
+   on:click={toggleMenu}>
+   Speakers
+</a>
+<a href="/schedule" 
+   style="text-decoration: none; color: white; display: block; padding: 12px 20px; font-size: 18px; 
+          border-radius: 8px; transition: background 0.3s ease, transform 0.2s;"
+   on:click={toggleMenu}>
+   Schedule
+</a>
+<a href="/sponsors" 
+   style="text-decoration: none; color: white; display: block; padding: 12px 20px; font-size: 18px; 
+          border-radius: 8px; transition: background 0.3s ease, transform 0.2s;"
+   on:click={toggleMenu}>
+   Sponsors
+</a>
+<a href="/about" 
+   style="text-decoration: none; color: white; display: block; padding: 12px 20px; font-size: 18px; 
+          border-radius: 8px; transition: background 0.3s ease, transform 0.2s;"
+   on:click={toggleMenu}>
+   About
+</a>
+<a href="/contact" 
+   style="text-decoration: none; color: white; display: block; padding: 12px 20px; font-size: 18px; 
+          border-radius: 8px; transition: background 0.3s ease, transform 0.2s;"
+   on:click={toggleMenu}>
+   Contact
+</a>
+
 </div>
