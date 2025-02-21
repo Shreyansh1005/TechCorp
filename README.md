@@ -1,38 +1,117 @@
-# sv
+TechConf2025
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+TechConf2025 is a SvelteKit-based web application designed for managing and showcasing technology conferences. It provides a seamless experience for users to explore conference schedules, speaker details, and session information.
 
-## Creating a project
+🚀 Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+Modern UI with SvelteKit - A fast and reactive frontend.
 
-```bash
-# create a new project in the current directory
-npx sv create
+Dynamic Routing - Utilizes SvelteKit's powerful routing system.
 
-# create a new project in my-app
-npx sv create my-app
-```
+Server-Side Rendering (SSR) - Improves performance and SEO.
 
-## Developing
+Vercel Deployment - Easily deployable for production.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Styling with SCSS - Custom styling using SCSS.
 
-```bash
+Optimized Performance - Fast and efficient due to Svelte’s compilation.
+
+Pages
+
+Home Page: A visually appealing landing page that provides an introduction to the event.
+
+Schedule: A detailed list of conference sessions, including time slots and speakers.
+
+Speakers: Information about keynote speakers, including their expertise and session details.
+
+Sponsors: A section dedicated to event sponsors, showcasing their contributions.
+
+Registration: An interactive registration form for attendees.
+
+Contact Page: Provides event-related contact information.
+
+📌 Tech Stack
+
+Frontend: SvelteKit (v2.x)
+
+Styling: SCSS
+
+Deployment: Vercel
+
+Folder Structure
+
+The project follows a clean and modular structure for maintainability and scalability.
+
+techconf2025/
+│── src/
+│   ├── routes/
+│   │   ├── +page.svelte  # Home page
+│   │   ├── schedule/
+│   │   │   ├── +page.svelte  # Conference schedule
+│   │   ├── speakers/
+│   │   │   ├── +page.svelte  # Speaker details
+│   │   ├── sponsors/
+│   │   │   ├── +page.svelte  # Sponsors section
+│   │   ├── contact/
+│   │   │   ├── +page.svelte  # Contact page
+|   |   |── about/
+│   │   │   ├── +page.svelte  # About page
+│   ├── components/
+│   │   ├── Header.svelte  # Navigation bar
+│   │   ├── Footer.svelte  # Footer component
+│   │   ├── ScheduleTable.svelte  # Table component
+│   │   ├── SpeakerCard.svelte  # Speakers component
+│   │   ├── SponsorsGrid.svelte  # Sponsors component
+│   ├── styles/
+│   │   ├── global.scss  # Global styles
+│── static/
+│── package.json
+│── svelte.config.js
+│── README.md
+
+Installation & Setup
+
+Follow these steps to run the project locally:
+
+Clone the repository:
+
+git clone https://github.com/Shreyansh1005/techconf2025.git
+cd techconf2025
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Open your browser and navigate to http://localhost:5173/
 
-## Building
+Deployment
 
-To create a production version of your app:
+The project is deployed using Vercel:
 
-```bash
+Build the project:
+
 npm run build
-```
 
-You can preview the production build with `npm run preview`.
+Deploy with Vercel:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+vercel
+
+Contribution Guidelines
+
+Fork the repository.
+
+Create a feature branch (git checkout -b feature-name).
+
+Commit changes (git commit -m 'Add new feature').
+
+Push to the branch (git push origin feature-name).
+
+Create a Pull Request.
+
+License
+
+This project is licensed under the MIT License. Feel free to modify and use it for your needs.
