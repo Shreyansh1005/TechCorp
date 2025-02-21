@@ -3,12 +3,12 @@
     import { theme } from "../../stores/theme.js"; // Import the theme store
 
     const sponsors = [
-        { name: "TechCorp", tier: "Gold", logo: "/image/TechCorp.png" },
-        { name: "InnovateX", tier: "Silver", logo: "/image/innovateX.jpeg" },
-        { name: "DevSolutions", tier: "Bronze", logo: "/image/DevSolutions.jpeg" },
-        { name: "NextGen", tier: "Gold", logo: "/image/NextGen.png" },
-        { name: "CodeMasters", tier: "Silver", logo: "/image/CodeMasters.png" },
-        { name: "SoftSys", tier: "Bronze", logo: "/image/SoftSys.jpeg" },
+        { name: "TechCorp", tier: "Gold", logo: "/image/TechCorp.png", link: "https://techcorp.com" },
+        { name: "InnovateX", tier: "Silver", logo: "/image/innovateX.jpeg", link: "https://innovatex.com" },
+        { name: "DevSolutions", tier: "Bronze", logo: "/image/DevSolutions.jpeg", link: "https://devsolutions.com" },
+        { name: "NextGen", tier: "Gold", logo: "/image/NextGen.png", link: "https://nextgen.com" },
+        { name: "CodeMasters", tier: "Silver", logo: "/image/CodeMasters.png", link: "https://codemasters.com" },
+        { name: "SoftSys", tier: "Bronze", logo: "/image/SoftSys.jpeg", link: "https://softsys.com" },
     ];
 </script>
 
@@ -28,7 +28,9 @@
                                 <img src={sponsor.logo} alt={sponsor.name} class="sponsor-logo">
                             </div>
                             <div class="sponsor-back">
-                                <p>{sponsor.name}</p>
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <p>{sponsor.name}</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +49,9 @@
                                 <img src={sponsor.logo} alt={sponsor.name} class="sponsor-logo">
                             </div>
                             <div class="sponsor-back">
-                                <p>{sponsor.name}</p>
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <p>{sponsor.name}</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -66,7 +70,9 @@
                                 <img src={sponsor.logo} alt={sponsor.name} class="sponsor-logo">
                             </div>
                             <div class="sponsor-back">
-                                <p>{sponsor.name}</p>
+                                <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+                                    <p>{sponsor.name}</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -234,5 +240,15 @@
     /* Bronze Border */
     .bronze .sponsor-inner {
         border: 3px solid #cd7f32;
+    }
+
+    /* Link Styling */
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        opacity: 0.8;
     }
 </style>

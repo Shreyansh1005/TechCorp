@@ -21,6 +21,14 @@
 
         setTimeout(() => (successMessage = ""), 3000); // Hide message after 3s
     }
+
+    // Social Media Links
+    const socialMediaLinks = [
+        { platform: "Facebook", url: "https://facebook.com", icon: "https://cdn-icons-png.flaticon.com/512/124/124010.png" },
+        { platform: "Twitter", url: "https://twitter.com", icon: "https://cdn-icons-png.flaticon.com/512/124/124021.png" },
+        { platform: "Instagram", url: "https://instagram.com", icon: "https://cdn-icons-png.flaticon.com/512/174/174855.png" },
+        { platform: "LinkedIn", url: "https://linkedin.com", icon: "https://cdn-icons-png.flaticon.com/512/174/174857.png" },
+    ];
 </script>
 
 <Header />
@@ -50,6 +58,18 @@
             allowfullscreen
             src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Silicon+Valley,CA">
         </iframe>
+    </div>
+
+    <!-- Social Media Links Section -->
+    <div class="social-media">
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            {#each socialMediaLinks as link}
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    <img src={link.icon} alt={link.platform} class="social-icon" />
+                </a>
+            {/each}
+        </div>
     </div>
 </section>
 
@@ -177,6 +197,34 @@
         width: 100%;
         height: 300px;
         border: none;
+    }
+
+    /* Social Media Section */
+    .social-media {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .social-media h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease-in-out;
+        border: 50%;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.2);
     }
 
     /* Fade-in Animation */
